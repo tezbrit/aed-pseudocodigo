@@ -5,6 +5,9 @@
             "include": "#variables"
         },
         {
+            "include": "#properties"
+        },
+        {
             "include": "#comments"
         },
         {
@@ -37,6 +40,22 @@
                         },
                         "2": {
                             "name": "keyword.operator.assignment.aed"
+                        }
+                    }
+                }
+            ]
+        },
+
+        "properties": {
+            "patterns": [
+                {
+                    "match": "(\\.)([a-zA-Z_][a-zA-Z0-9_]*)",
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.accessor.dot.aed"
+                        },
+                        "2": {
+                            "name": "variable.other.property.aed"
                         }
                     }
                 }
@@ -91,8 +110,8 @@
                     "match": "(?i)\\b(FUNCION|FIN_FUNCION|SUBACCION|FIN_SUBACCION|PROCEDIMIENTO|FIN_PROCEDIMIENTO)\\b"
                 },
                 {
-                    "name": "keyword.other.aed",
-                    "match": "(?i)\\b(ESCRIBIR|LEER)\\b"
+                    "name": "support.function.aed",
+                    "match": "(?i)(?:\\bABRIR\\b(?:/E/S|\\s+E/S|/E|\\s+E/|/S|\\s+S/)?|\\b(?:LEER|GRABAR|ESCRIBIR|ESC|RE-ESCRIBIR|REGRABAR|RE-GRABAR|BORRAR|CERRAR|ARR|ARRANCAR|AVZ|AVANZAR|CREAR|NUEVO|DISPONER|TRUNC|REDOND|ABSO|FDA|NFDA|FDS|NFDS|EXISTE)\\b)"
                 }
             ]
         },
@@ -118,7 +137,7 @@
             "patterns": [
                 {
                     "name": "constant.language.aed",
-                    "match": "(?i)\\b(VERDADERO|FALSO|V|F)\\b"
+                    "match": "(?i)\\b(VERDADERO|FALSO|V|F|NIL|HV|HIGH_VALUE|LV|LOW_VALUE|LECTURA|ESCRITURA|ACTUALIZACION)\\b"
                 }
             ]
         },
