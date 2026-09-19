@@ -46,6 +46,10 @@
         "comments": {
             "patterns": [
                 {
+                    "name": "comment.line.double-slash.aed",
+                    "match": "//.*$"
+                },
+                {
                     "name": "comment.block.aed",
                     "begin": "/\\*",
                     "end": "\\*/"
@@ -59,6 +63,11 @@
                     "name": "string.quoted.double.aed",
                     "begin": "\"",
                     "end": "\""
+                },
+                {
+                    "name": "string.quoted.single.aed",
+                    "begin": "'",
+                    "end": "'"
                 }
             ]
         },
@@ -92,15 +101,15 @@
             "patterns": [
                 {
                     "name": "storage.type.struct.aed",
-                    "match": "(?i)\\b(ARREGLO|SECUENCIA|ARCHIVO|REGISTRO)\\b"
+                    "match": "(?i)\\b(ARREGLO|SECUENCIA|ARCHIVO|REGISTRO|FIN_REGISTRO|FR|PUNTERO|NODO)\\b"
                 },
                 {
                     "name": "storage.type.aed",
-                    "match": "(?i)\\b(ENTERO|N|AN|REAL|ALFANUMERICO|NUMERICO|CARACTER|LOGICO)\\b"
+                    "match": "(?i)\\b(ENTERO|N|AN|REAL|ALFANUMERICO|NUMERICO|CARACTER|LOGICO|BOOLEANO|BOOLEANDO)\\b"
                 },
                 {
                     "name": "keyword.operator.aed",
-                    "match": "(?i)\\b(DE)\\b"
+                    "match": "(?i)\\b(DE|A|ORDENADO|INDEXADO|POR)\\b"
                 }
             ]
         },
@@ -109,7 +118,7 @@
             "patterns": [
                 {
                     "name": "constant.language.aed",
-                    "match": "(?i)\\b(VERDADERO|FALSO)\\b"
+                    "match": "(?i)\\b(VERDADERO|FALSO|V|F)\\b"
                 }
             ]
         },
@@ -134,8 +143,16 @@
                     "match": "\\b(MOD|DIV)\\b|[+\\-*/]"
                 },
                 {
+                    "name": "keyword.operator.logical.aed",
+                    "match": "(?i)\\b(EN|Y|O|NO)\\b"
+                },
+                {
                     "name": "keyword.operator.comparison.aed",
                     "match": "(<=|>=|<>|=|<|>)"
+                },
+                {
+                    "name": "keyword.operator.range.aed",
+                    "match": "\\.\\."
                 }
             ]
         }
