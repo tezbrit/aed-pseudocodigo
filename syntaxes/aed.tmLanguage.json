@@ -1,0 +1,143 @@
+{
+    "scopeName": "source.aed",
+    "patterns": [
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#operators"
+        }
+    ],
+    "repository": {
+        "variables": {
+            "patterns": [
+                {
+                    "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*(:=|:|=)",
+                    "captures": {
+                        "1": {
+                            "name": "variable.other.readwrite.aed"
+                        },
+                        "2": {
+                            "name": "keyword.operator.assignment.aed"
+                        }
+                    }
+                }
+            ]
+        },
+
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.block.aed",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.aed",
+                    "begin": "\"",
+                    "end": "\""
+                }
+            ]
+        },
+
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.aed",
+                    "match": "(?i)\\b(ACCION|FIN_ACCION|AMBIENTE|PROCESO)\\b"
+                },
+                {
+                    "name": "keyword.control.conditional.aed",
+                    "match": "(?i)\\b(SI|ENTONCES|SINO|FIN_SI)\\b"
+                },
+                {
+                    "name": "keyword.control.loop.aed",
+                    "match": "(?i)\\b(PARA|HASTA|HACER|FIN_PARA|MIENTRAS|FIN_MIENTRAS|REPETIR|HASTA_QUE)\\b"
+                },
+                {
+                    "name": "keyword.other.aed",
+                    "match": "(?i)\\b(FUNCION|FIN_FUNCION|SUBACCION|FIN_SUBACCION|PROCEDIMIENTO|FIN_PROCEDIMIENTO)\\b"
+                },
+                {
+                    "name": "keyword.other.aed",
+                    "match": "(?i)\\b(ESCRIBIR|LEER)\\b"
+                }
+            ]
+        },
+
+        "types": {
+            "patterns": [
+                {
+                    "name": "storage.type.struct.aed",
+                    "match": "(?i)\\b(ARREGLO|SECUENCIA|ARCHIVO|REGISTRO)\\b"
+                },
+                {
+                    "name": "storage.type.aed",
+                    "match": "(?i)\\b(ENTERO|N|AN|REAL|ALFANUMERICO|NUMERICO|CARACTER|LOGICO)\\b"
+                },
+                {
+                    "name": "keyword.operator.aed",
+                    "match": "(?i)\\b(DE)\\b"
+                }
+            ]
+        },
+
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.language.aed",
+                    "match": "(?i)\\b(VERDADERO|FALSO)\\b"
+                }
+            ]
+        },
+
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.aed",
+                    "match": "(?i)\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        },
+
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.assignment.aed",
+                    "match": ":="
+                },
+                {
+                    "name": "keyword.operator.arithmetic.aed",
+                    "match": "\\b(MOD|DIV)\\b|[+\\-*/]"
+                },
+                {
+                    "name": "keyword.operator.comparison.aed",
+                    "match": "(<=|>=|<>|=|<|>)"
+                }
+            ]
+        }
+    }
+}

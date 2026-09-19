@@ -1,0 +1,40 @@
+{
+    "name": "aed-pseudocodigo",
+    "displayName": "AED SYNTAX HIGHLIGHTING",
+    "description": "Resaltado de sintaxis para el pseudocódigo de Algoritmos y Estructuras de Datos (UTN FRRe).",
+    "version": "0.0.1",
+    "publisher": "tezbrit",
+    "author": "Octavio Agustín BRITTEZ",
+    "icon": "icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tezbrit/aed-pseudocodigo"
+    },
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "aed",
+                "aliases": [
+                    "AED",
+                    "AED Pseudocódigo"
+                ],
+                "extensions": [
+                    ".aed"
+                ]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "aed",
+                "scopeName": "source.aed",
+                "path": "./syntaxes/aed.tmLanguage.json"
+            }
+        ]
+    }
+}
