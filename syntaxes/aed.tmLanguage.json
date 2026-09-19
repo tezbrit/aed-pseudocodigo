@@ -124,7 +124,7 @@
                 },
                 {
                     "name": "storage.type.aed",
-                    "match": "(?i)\\b(ENTERO|N|AN|REAL|ALFANUMERICO|NUMERICO|CARACTER|LOGICO|BOOLEANO|BOOLEANDO)\\b"
+                    "match": "(?i)\\b(ENTERO|ENTEROS|ALFANUMERICOS|N|AN|REAL|REALES|ALFANUMERICO|NUMERICO|NUMERICOS|CARACTER|CARACTERES|LOGICO|BOOLEANO|BOOLEANDO)\\b"
                 },
                 {
                     "name": "keyword.operator.aed",

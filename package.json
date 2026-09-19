@@ -2,7 +2,7 @@
     "name": "aed-utn-frre-pseudocodigo",
     "displayName": "AED Pseudocódigo - UTN FRRe",
     "description": "Resaltado de sintaxis para el pseudocódigo de Algoritmos y Estructuras de Datos (UTN FRRe).",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "tezbrit",
     "author": "Octavio Agustín BRITTEZ",
     "icon": "icon.png",
